@@ -4,7 +4,49 @@
 @import 'reset';
 @import 'base';
 
-p{
+@media (min-width: 1200px) {
+    .container-xl {
+        max-width: 1600px;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+
+    }
+}
+
+p {
     font-size: 80px;
-    color:$accent;
+    color: $accent;
+}
+
+body {
+    background-color: $background;
+}
+
+.main-navbar {
+    padding: 32px 0;
+
+    .navbar-brand {
+        font-family: $main-font;
+        color: $logo-text;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+.navbar-nav {
+    .nav-item {
+        a {
+            font-family: $main-font;
+            color: $dark-text !important;
+            font-size: 14px;
+            line-height: 16px;
+            font-weight: 700;
+        }
+        a:hover{
+            color: $light-blue !important;
+        }
+    }
 }
