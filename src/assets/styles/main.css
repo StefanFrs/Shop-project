@@ -123,11 +123,6 @@ body {
   }
 }
 
-p {
-  font-size: 80px;
-  color: #2FDA7F;
-}
-
 body {
   background-color: #FAFAFA;
 }
@@ -153,5 +148,48 @@ body {
 
 .navbar-nav .nav-item a:hover {
   color: #155BCC !important;
+}
+
+.light-card {
+  background-color: #155BCC;
+}
+
+.light-card .card-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Roboto";
+  font-size: 16px;
+  margin: 0;
+}
+
+.light-card .card-text p {
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Lato";
+  font-size: 13px;
+  margin: 0;
+}
+
+.main-page {
+  padding-top: 70px;
+}
+
+.product-card .card-title {
+  font-weight: 700;
+  font-family: "Roboto";
+  font-size: 18px;
+  color: #424242;
+}
+
+.product-card .card-text {
+  color: #858585;
+  font-weight: 400;
+  font-family: "Roboto";
+  font-size: 12px;
+}
+
+.main-card {
+  width: 260px;
+  height: 370px;
 }
 /*# sourceMappingURL=main.css.map */

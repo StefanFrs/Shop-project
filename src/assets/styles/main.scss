@@ -16,10 +16,6 @@
     }
 }
 
-p {
-    font-size: 80px;
-    color: $accent;
-}
 
 body {
     background-color: $background;
@@ -45,8 +41,54 @@ body {
             line-height: 16px;
             font-weight: 700;
         }
-        a:hover{
+
+        a:hover {
             color: $light-blue !important;
         }
     }
+}
+
+.light-card {
+    background-color: $light-blue;
+
+    .card-title {
+            color: $white;
+            font-weight: 700;
+            font-family: $main-font;
+            font-size: 16px;
+            margin: 0;
+    }
+
+    .card-text {
+        p {
+            color: $white;
+            font-weight: 400;
+            font-family: $second-font;
+            font-size: 13px;
+            margin: 0;
+        }
+    }
+}
+
+.main-page{
+    padding-top: 70px;
+}
+
+.product-card{
+    .card-title{
+        font-weight: 700;
+        font-family: $main-font;
+        font-size: 18px;
+        color: $dark-text;
+    }
+    .card-text {
+            color: $light-text;
+            font-weight: 400;
+            font-family: $main-font;
+            font-size: 12px;
+    }
+}
+.main-card{
+    width: 260px;
+    height: 370px;
 }

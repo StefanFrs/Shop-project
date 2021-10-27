@@ -1,7 +1,7 @@
 {
   "name": "droid-recruitment-task",
   "version": "1.0.0",
-  "description": "",
+  "description": "Start with creating a responsive app template based on received materials. Feel free to use any technology of your choice. At this stage, we mainly expect good HTML/CSS skills, but using style libraries and toolkits is allowed too.",
   "main": "index.js",
   "dependencies": {
     "html-webpack-plugin": "^3.2.0",

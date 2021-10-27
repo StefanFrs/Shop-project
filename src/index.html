@@ -12,43 +12,99 @@
 </head>
 
 <body>
+  <header class="main-header">
+    <!-- navigation -->
+    <div class="container-xl container">
+      <nav class="main-navbar navbar navbar-expand-lg navbar-light ">
+
+        <a class="navbar-brand" href="#">Droidd</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse text-center text-xl-start justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav ">
+            <li class="nav-item active">
+              <a class="nav-link mr-lg-5 data-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-lg-5 data-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mr-lg-5 data-link" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex justify-content-center form-inline my-2 my-lg-0">
+            <input class="form-control " type="search" placeholder="Search" aria-label="Search">
+          </form>
+      </nav>
+    </div>
+    <hr class="m-0">
+  </header>
   <main>
-    <header class="main-header">
-      <!-- navigation -->
+    <div class="main-page">
       <div class="container-xl container">
-        <nav class="main-navbar navbar navbar-expand-lg navbar-light ">
+        <div class="row">
+          <!-- Contact card + shopping cart -->
+          <div class="col-xl-3">
+            <div class="main-card card light-card">
+              <div class="card-body">
+                <div class="image-and-title d-flex align-items-center pb-4">
+                  <img class="mr-3 img-fluid" src="/src/assets/images/phone-book.png" alt="contact">
+                  <h5 class="card-title">Contact</h5>
+                </div>
+                <div class="card-text pb-4">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam purus est, placerat sed ante vel,
+                    ultrices congue augue. </p>
+                </div>
+                <div class="image-and-title d-flex align-items-center pb-4">
+                  <img class="mr-3 img-fluid" src="/src/assets/images/shopping-cart.png" alt="contact">
+                  <h5 class="card-title">Cart</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9">
 
-          <a class="navbar-brand" href="#">Droidd</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
 
-          <div class="collapse navbar-collapse text-center text-xl-start justify-content-end"
-            id="navbarSupportedContent">
-            <ul class="navbar-nav ">
-              <li class="nav-item active">
-                <a class="nav-link mr-lg-5" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mr-lg-5" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mr-lg-5" href="#">Contact</a>
-              </li>
-            </ul>
-            <form class="d-flex justify-content-center form-inline my-2 my-lg-0">
-              <input class="form-control " type="search" placeholder="Search" aria-label="Search">
-            </form>
-        </nav>
+            <div class="d-flex justify-content-around flex-wrap">
+              <!-- list of products -->
+              <div class="card product-card">
+                <img class="card-img-top" src="/src/assets/images/Rectangle 2.1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Title</h5>
+                  <p class="card-text">Description</p>
+                </div>
+              </div>
+              <div class="card product-card">
+                <img class="card-img-top" src="/src/assets/images/Rectangle 2.1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Title</h5>
+                  <p class="card-text">Description</p>
+                </div>
+              </div>
+              <div class="card product-card">
+                <img class="card-img-top" src="/src/assets/images/Rectangle 2.1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Title</h5>
+                  <p class="card-text">Description</p>
+                </div>
+              </div>
+              <div class="card product-card">
+                <img class="card-img-top" src="/src/assets/images/Rectangle 2.1.jpg" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">Title</h5>
+                  <p class="card-text">Description</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
-      <hr class="m-0">
-    </header>
-
+    </div>
   </main>
-
-
-
 
   <script src="./bundle.js"></script>
   <script src="./index.js"></script>
