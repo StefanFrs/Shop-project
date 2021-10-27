@@ -1,0 +1,10 @@
+@import 'reset';
+@import 'variables';
+@import 'typography';
+@import 'reset';
+@import 'base';
+
+p{
+    font-size: 80px;
+    color:$accent;
+}
