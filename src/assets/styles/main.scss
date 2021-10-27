@@ -75,17 +75,35 @@ body {
 }
 
 .product-card{
+    height: 500px;
+    width: 215px;
+    img{
+        height: 215px;
+        width: 215px;
+    }
     .card-title{
         font-weight: 700;
         font-family: $main-font;
         font-size: 18px;
         color: $dark-text;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
     }
     .card-text {
             color: $light-text;
             font-weight: 400;
             font-family: $main-font;
             font-size: 12px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+    }
+    .price-product{
+        position: absolute;
+        bottom: 10px;
     }
 }
 .main-card{

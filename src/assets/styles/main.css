@@ -174,11 +174,25 @@ body {
   padding-top: 70px;
 }
 
+.product-card {
+  height: 500px;
+  width: 215px;
+}
+
+.product-card img {
+  height: 215px;
+  width: 215px;
+}
+
 .product-card .card-title {
   font-weight: 700;
   font-family: "Roboto";
   font-size: 18px;
   color: #424242;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 .product-card .card-text {
@@ -186,6 +200,15 @@ body {
   font-weight: 400;
   font-family: "Roboto";
   font-size: 12px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.product-card .price-product {
+  position: absolute;
+  bottom: 10px;
 }
 
 .main-card {
