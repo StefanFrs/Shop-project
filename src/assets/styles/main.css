@@ -140,14 +140,14 @@ body {
 
 .navbar-nav .nav-item a {
   font-family: "Roboto";
-  color: #424242 !important;
+  color: #424242;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
 }
 
 .navbar-nav .nav-item a:hover {
-  color: #155BCC !important;
+  color: #155BCC;
 }
 
 .light-card {
@@ -214,5 +214,97 @@ body {
 .main-card {
   width: 260px;
   height: 370px;
+}
+
+.add-cart {
+  width: 100%;
+  text-decoration: none !important;
+  color: #155BCC;
+  background-color: #D6D6D6;
+  cursor: pointer;
+  text-align: center;
+}
+
+.navlink-active {
+  color: #155BCC !important;
+}
+
+.main-about-page {
+  padding-top: 100px;
+  width: 660px;
+}
+
+.main-about-page .middle-box {
+  background-color: #ffffff;
+  padding: 60px 100px;
+}
+
+.main-about-page .middle-box .title-section {
+  font-weight: 700;
+  font-family: "Roboto";
+  font-size: 24px;
+  color: #424242;
+  margin: 0;
+}
+
+.main-about-page .middle-box p {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6E6E6E;
+  margin: 0;
+  text-align: justify;
+}
+
+#spinner:not([hidden]) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  will-change: transform;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 /*# sourceMappingURL=main.css.map */

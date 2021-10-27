@@ -36,14 +36,14 @@ body {
     .nav-item {
         a {
             font-family: $main-font;
-            color: $dark-text !important;
+            color: $dark-text;
             font-size: 14px;
             line-height: 16px;
             font-weight: 700;
         }
 
         a:hover {
-            color: $light-blue !important;
+            color: $light-blue;
         }
     }
 }
@@ -52,11 +52,11 @@ body {
     background-color: $light-blue;
 
     .card-title {
-            color: $white;
-            font-weight: 700;
-            font-family: $main-font;
-            font-size: 16px;
-            margin: 0;
+        color: $white;
+        font-weight: 700;
+        font-family: $main-font;
+        font-size: 16px;
+        margin: 0;
     }
 
     .card-text {
@@ -70,18 +70,20 @@ body {
     }
 }
 
-.main-page{
+.main-page {
     padding-top: 70px;
 }
 
-.product-card{
+.product-card {
     height: 500px;
     width: 215px;
-    img{
+
+    img {
         height: 215px;
         width: 215px;
     }
-    .card-title{
+
+    .card-title {
         font-weight: 700;
         font-family: $main-font;
         font-size: 18px;
@@ -91,22 +93,96 @@ body {
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
     }
+
     .card-text {
-            color: $light-text;
-            font-weight: 400;
-            font-family: $main-font;
-            font-size: 12px;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 5;
-            -webkit-box-orient: vertical;
+        color: $light-text;
+        font-weight: 400;
+        font-family: $main-font;
+        font-size: 12px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
     }
-    .price-product{
+
+    .price-product {
         position: absolute;
         bottom: 10px;
     }
 }
-.main-card{
+
+.main-card {
     width: 260px;
     height: 370px;
 }
+
+.add-cart {
+    width: 100%;
+    text-decoration: none !important;
+    color: $light-blue;
+    background-color: $gray;
+    cursor: pointer;
+    text-align: center;
+}
+
+.navlink-active {
+    color: $light-blue !important;
+}
+
+// About page & contact style
+.main-about-page {
+    padding-top: 100px;
+    width: 660px;
+    .middle-box {
+        background-color: $white;
+        padding: 60px 100px;
+        .title-section{
+            font-weight: 700;
+            font-family: $main-font;
+            font-size: 24px;
+            color: $dark-text;
+            margin: 0;
+        }
+        p{
+            font-family: $second-font;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: $logo-text;
+            margin: 0;
+            text-align: justify;
+        }
+    }
+}
+// spinner effect
+#spinner:not([hidden]) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #spinner::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f3f3f3;
+    border-top: 3px solid #f25a41;
+    border-radius: 100%;
+    will-change: transform;
+    animation: spin 1s infinite linear
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

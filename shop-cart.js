@@ -27,11 +27,13 @@
 //         });
 // }
 
-
+const spinner = document.getElementById("spinner");
 async function getProducts() {
+    spinner.removeAttribute('hidden');
     let url = 'https://fakestoreapi.com/products';
     try {
         let res = await fetch(url);
+        spinner.setAttribute('hidden', '');
         return await res.json();
     } catch (error) {
         console.log(error);
@@ -39,17 +41,19 @@ async function getProducts() {
 }
 
 async function renderProducts() {
+  
     let products = await getProducts();
     let html = '';
     console.log(products);
     products.forEach(product => {
         let htmlSegment = `
-        <div class="card product-card mb-4" onclick="addToCart(${product.id})">
+        <div class="card product-card mb-4">
         <img class="card-img-top img-fluid" src="${product.image}" alt="${product.title}">
         <div class="card-body">
         <h5 class="card-title">${product.title}</h5>
         <p class="card-text description-text">${product.description}</p>
         <h5 class="price-product"> Price : ${product.price}$ </h5>
+        <a class="add-cart" href ="#">Add to card </a>
         </div>
        </div>
     `;
@@ -66,27 +70,27 @@ renderProducts();
 // const globalProducts=products.then(function (result) {
 // console.log(result)
 // })
+console.log("test");
+
+var timeout = setTimeout(function () {
+    var carts = document.querySelectorAll('.add-cart')
+}, 5000);
+console.log(timeout);
 
 
-//cart array
-let cart = [];
+// let carts = document.querySelectorAll('.add-cart');
+// console.log(carts);
 
+for (let i = 0; i < timeout.length; i++) {
+    timeout[i].addEventListener('click', () => {
+        console.log("ai apasat");
+        cartNumbers();
+    })
+}
 
-//add to cart
-
-function addToCart(id) {
-
-    // check if prodcut already exist in cart
-    // if (cart.some((item) => item.id === id)) {
-    //   changeNumberOfUnits("plus", id);
-    // } else {
-    const item = products.find((product) => product.id === id);
-    console.log(item);
-
-    //   cart.push({
-    //     ...item,
-    //     numberOfUnits: 1,
-    //   });
-    // }
-
+function cartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    console.log(productNumbers);
+    productNumbers = parseInt(productNumbers);
+    localStorage.setItem('cartNumbers', 1);
 }
