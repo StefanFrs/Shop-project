@@ -219,10 +219,19 @@ body {
 .add-cart {
   width: 100%;
   text-decoration: none !important;
-  color: #155BCC;
-  background-color: #D6D6D6;
+  padding: 8px;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: #155BCC;
   cursor: pointer;
   text-align: center;
+  outline: none;
+  border-color: #155BCC;
+}
+
+.add-cart:hover {
+  color: #ffffff;
+  background-color: #164FAC;
 }
 
 .navlink-active {
@@ -306,5 +315,9 @@ body {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.cartImg {
+  width: 200px;
 }
 /*# sourceMappingURL=main.css.map */

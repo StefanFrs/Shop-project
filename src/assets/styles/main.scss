@@ -119,10 +119,18 @@ body {
 .add-cart {
     width: 100%;
     text-decoration: none !important;
-    color: $light-blue;
-    background-color: $gray;
+    padding: 8px;
+    border-radius: 4px;
+    color: $white;
+    background-color: $light-blue;
     cursor: pointer;
     text-align: center;
+    outline: none;
+    border-color: $light-blue;
+}
+.add-cart:hover{
+    color: $white;
+    background-color: $dark-blue;
 }
 
 .navlink-active {
@@ -186,3 +194,6 @@ body {
     }
   }
   
+  .cartImg{
+      width: 200px;
+  }

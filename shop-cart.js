@@ -1,31 +1,3 @@
-// function fetchData() {
-//     fetch("https://fakestoreapi.com/products")
-//         .then(response => {
-//             if (!response.ok) {
-//                 throw Error("Error");
-//             }
-//             return response.json();
-//         })
-//         .then(data => {
-//             const html = data.data
-//                 .map(products => {
-//                     return `
-//     <div class="card product-card">
-//     <img class="card-img-top" src="${products.image}" alt="Card image cap">
-//     <div class="card-body">
-//       <h5 class="card-title">${products.title}</h5>
-//       <p class="card-text">${products.description}</p>
-//     </div>
-//   </div>
-//         `;
-//                 })
-//                 .join("");
-//             document.querySelector("#product-card").insertAdjacentElement("afterbegin", html);
-//         })
-//         .catch(error => {
-//             console.log(error);
-//         });
-// }
 
 const spinner = document.getElementById("spinner");
 async function getProducts() {
@@ -41,19 +13,19 @@ async function getProducts() {
 }
 
 async function renderProducts() {
-  
+
     let products = await getProducts();
     let html = '';
     console.log(products);
     products.forEach(product => {
         let htmlSegment = `
-        <div class="card product-card mb-4">
+        <div class="card product-card mb-4" id="${product.id}">
         <img class="card-img-top img-fluid" src="${product.image}" alt="${product.title}">
         <div class="card-body">
         <h5 class="card-title">${product.title}</h5>
         <p class="card-text description-text">${product.description}</p>
         <h5 class="price-product"> Price : ${product.price}$ </h5>
-        <a class="add-cart" href ="#">Add to card </a>
+        <span class="add-cart" href ="#" onclick="addToCart(${product.id})">Add to cart </span>
         </div>
        </div>
     `;
@@ -70,27 +42,32 @@ renderProducts();
 // const globalProducts=products.then(function (result) {
 // console.log(result)
 // })
+
 console.log("test");
 
-var timeout = setTimeout(function () {
-    var carts = document.querySelectorAll('.add-cart')
-}, 5000);
-console.log(timeout);
-
-
-// let carts = document.querySelectorAll('.add-cart');
+// var carts = document.getElementsByClassName('add-cart');
 // console.log(carts);
 
-for (let i = 0; i < timeout.length; i++) {
-    timeout[i].addEventListener('click', () => {
-        console.log("ai apasat");
-        cartNumbers();
-    })
-}
+// for (var i = 0; i < carts.length; i++) {
+//     console.log(carts[i]);
+//     carts[i].addEventListener('click', addToCart)
+// }
 
-function cartNumbers() {
-    let productNumbers = localStorage.getItem('cartNumbers');
-    console.log(productNumbers);
-    productNumbers = parseInt(productNumbers);
-    localStorage.setItem('cartNumbers', 1);
+
+var addItemId = 0;
+
+function addToCart(item) {
+    addItemId += 1;
+    var selectedItem = document.createElement('div');
+    var cart = document.getElementById("cart");
+
+
+    selectedItem.classList.add('cartImg');
+    selectedItem.setAttribute('id', addItemId);
+    var title = document.createElement('div');
+    title.innerText = item.children[1].innerText;
+    var cartItems = document.getElementById('title');
+    selectedItem.append(title);
+    cartItems.append(selectedItem);
+
 }
