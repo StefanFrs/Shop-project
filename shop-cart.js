@@ -1,6 +1,6 @@
 
 const spinner = document.getElementById("spinner");
-const cart = document.getElementById("cart");
+const cart = document.querySelector(".list-items");
 async function getProducts() {
     spinner.removeAttribute('hidden');
     let url = 'https://fakestoreapi.com/products';
@@ -21,7 +21,7 @@ async function renderProducts() {
 
     products.forEach(product => {
         let htmlSegment = `
-        <div class="card product-card mb-4" id="${product.id}">
+        <div class="card product-card mb-4 item-${product.id}" id="${product.id}">
         <img class="card-img-top img-fluid" src="${product.image}" alt="${product.title}">
         <div class="card-body">
         <h5 class="card-title">${product.title}</h5>
@@ -40,13 +40,13 @@ async function renderProducts() {
 }
 
 function addToCart(id){
-    let html = '';
-    let selectedItem = document.getElementById(id);
+    let noProducts = 1;
+    const li = document.createElement("li");
+    let selectedItem = document.querySelector(`.item-${id} .card-title`);
     console.log(selectedItem);
-    let cartHtml = `
-    
-    `;
-    html += cartHtml;
+    li.append(selectedItem.textContent);
+    cart.append(li);
+    noProducts++;
 }
 
 renderProducts();

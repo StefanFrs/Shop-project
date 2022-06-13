@@ -84,7 +84,8 @@ body {
 }
 
 ol, ul {
-  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote, q {
@@ -321,3 +322,11 @@ body {
   width: 200px;
 }
 /*# sourceMappingURL=main.css.map */
+.cart ol{
+    list-style: auto;
+  }
+
+.cart ol li {
+  color: white;
+  padding: 5px;
+}

@@ -1,199 +1,207 @@
-@import 'reset';
-@import 'variables';
-@import 'typography';
-@import 'reset';
-@import 'base';
+@import "reset";
+@import "variables";
+@import "typography";
+@import "reset";
+@import "base";
 
 @media (min-width: 1200px) {
-    .container-xl {
-        max-width: 1600px;
-        width: 100%;
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;
-
-    }
+  .container-xl {
+    max-width: 1600px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
-
 body {
-    background-color: $background;
+  background-color: $background;
 }
 
 .main-navbar {
-    padding: 32px 0;
+  padding: 32px 0;
 
-    .navbar-brand {
-        font-family: $main-font;
-        color: $logo-text;
-        font-size: 24px;
-        line-height: 28px;
-    }
+  .navbar-brand {
+    font-family: $main-font;
+    color: $logo-text;
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 .navbar-nav {
-    .nav-item {
-        a {
-            font-family: $main-font;
-            color: $dark-text;
-            font-size: 14px;
-            line-height: 16px;
-            font-weight: 700;
-        }
-
-        a:hover {
-            color: $light-blue;
-        }
+  .nav-item {
+    a {
+      font-family: $main-font;
+      color: $dark-text;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 700;
     }
+
+    a:hover {
+      color: $light-blue;
+    }
+  }
 }
 
 .light-card {
-    background-color: $light-blue;
+  background-color: $light-blue;
 
-    .card-title {
-        color: $white;
-        font-weight: 700;
-        font-family: $main-font;
-        font-size: 16px;
-        margin: 0;
-    }
+  .card-title {
+    color: $white;
+    font-weight: 700;
+    font-family: $main-font;
+    font-size: 16px;
+    margin: 0;
+  }
 
-    .card-text {
-        p {
-            color: $white;
-            font-weight: 400;
-            font-family: $second-font;
-            font-size: 13px;
-            margin: 0;
-        }
+  .card-text {
+    p {
+      color: $white;
+      font-weight: 400;
+      font-family: $second-font;
+      font-size: 13px;
+      margin: 0;
     }
+  }
 }
 
 .main-page {
-    padding-top: 70px;
+  padding-top: 70px;
 }
 
 .product-card {
-    height: 500px;
+  height: 500px;
+  width: 215px;
+
+  img {
+    height: 215px;
     width: 215px;
+  }
 
-    img {
-        height: 215px;
-        width: 215px;
-    }
+  .card-title {
+    font-weight: 700;
+    font-family: $main-font;
+    font-size: 18px;
+    color: $dark-text;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
 
-    .card-title {
-        font-weight: 700;
-        font-family: $main-font;
-        font-size: 18px;
-        color: $dark-text;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-    }
+  .card-text {
+    color: $light-text;
+    font-weight: 400;
+    font-family: $main-font;
+    font-size: 12px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
 
-    .card-text {
-        color: $light-text;
-        font-weight: 400;
-        font-family: $main-font;
-        font-size: 12px;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical;
-    }
-
-    .price-product {
-        position: absolute;
-        bottom: 10px;
-    }
+  .price-product {
+    position: absolute;
+    bottom: 10px;
+  }
 }
 
 .main-card {
-    width: 260px;
-    height: 370px;
+  width: 260px;
+  height: 370px;
 }
 
 .add-cart {
-    width: 100%;
-    text-decoration: none !important;
-    padding: 8px;
-    border-radius: 4px;
-    color: $white;
-    background-color: $light-blue;
-    cursor: pointer;
-    text-align: center;
-    outline: none;
-    border-color: $light-blue;
+  width: 100%;
+  text-decoration: none !important;
+  padding: 8px;
+  border-radius: 4px;
+  color: $white;
+  background-color: $light-blue;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  border-color: $light-blue;
 }
-.add-cart:hover{
-    color: $white;
-    background-color: $dark-blue;
+.add-cart:hover {
+  color: $white;
+  background-color: $dark-blue;
 }
 
 .navlink-active {
-    color: $light-blue !important;
+  color: $light-blue !important;
 }
 
 // About page & contact style
 .main-about-page {
-    padding-top: 100px;
-    width: 660px;
-    .middle-box {
-        background-color: $white;
-        padding: 60px 100px;
-        .title-section{
-            font-weight: 700;
-            font-family: $main-font;
-            font-size: 24px;
-            color: $dark-text;
-            margin: 0;
-        }
-        p{
-            font-family: $second-font;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 22px;
-            color: $logo-text;
-            margin: 0;
-            text-align: justify;
-        }
+  padding-top: 100px;
+  width: 660px;
+  .middle-box {
+    background-color: $white;
+    padding: 60px 100px;
+    .title-section {
+      font-weight: 700;
+      font-family: $main-font;
+      font-size: 24px;
+      color: $dark-text;
+      margin: 0;
     }
+    p {
+      font-family: $second-font;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 22px;
+      color: $logo-text;
+      margin: 0;
+      text-align: justify;
+    }
+  }
 }
 // spinner effect
 #spinner:not([hidden]) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  will-change: transform;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  
-  #spinner::after {
-    content: "";
-    width: 80px;
-    height: 80px;
-    border: 2px solid #f3f3f3;
-    border-top: 3px solid #f25a41;
-    border-radius: 100%;
-    will-change: transform;
-    animation: spin 1s infinite linear
+  to {
+    transform: rotate(360deg);
   }
-  
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
+}
+
+.cartImg {
+  width: 200px;
+}
+
+.cart {
+  ol {
+    list-style: auto;
+    li {
+      color: white;
+      padding: 5px;
     }
-    to {
-      transform: rotate(360deg);
-    }
   }
-  
-  .cartImg{
-      width: 200px;
-  }
+}
