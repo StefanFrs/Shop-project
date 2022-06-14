@@ -171,6 +171,10 @@ body {
   margin: 0;
 }
 
+.card-body{
+  overflow: auto;
+}
+
 .main-page {
   padding-top: 70px;
 }
@@ -324,9 +328,16 @@ body {
 /*# sourceMappingURL=main.css.map */
 .cart ol{
     list-style: auto;
+    padding-bottom: 10px;
   }
 
 .cart ol li {
   color: white;
   padding: 5px;
+}
+
+.cart p{
+    border-top: 1px solid white;
+    color: white;
+    padding-top: 10px;
 }

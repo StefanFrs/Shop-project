@@ -40,13 +40,14 @@ async function renderProducts() {
 }
 
 function addToCart(id){
-    let noProducts = 1;
     const li = document.createElement("li");
+    const showNr = document.getElementById("nrProducts")
+    let noProducts = 1;
     let selectedItem = document.querySelector(`.item-${id} .card-title`);
     console.log(selectedItem);
     li.append(selectedItem.textContent);
     cart.append(li);
+    showNr.innerHTML = `(${noProducts})items`; //not working, try with html+=htmlSegment
     noProducts++;
 }
-
 renderProducts();
