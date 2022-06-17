@@ -214,6 +214,7 @@ body {
 .product-card .price-product {
   position: absolute;
   bottom: 10px;
+  display: inline-flex;
 }
 
 .main-card {
@@ -340,4 +341,10 @@ body {
     border-top: 1px solid white;
     color: white;
     padding-top: 10px;
+}
+
+#nrProducts{
+  color: white;
+  margin-bottom: 0;
+  padding-left: 10px;
 }
