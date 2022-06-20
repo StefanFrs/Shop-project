@@ -40,6 +40,8 @@ async function renderProducts() {
 
     let container = document.querySelector('.products-list');
     container.innerHTML = html;
+
+    search();
 }
 
 function addToCart(id){
@@ -48,35 +50,31 @@ function addToCart(id){
     let selectedItem = document.querySelector(`.item-${id} .card-title`);
     let slectedPrice = document.querySelector(`.item-${id} .price`);
     let selectedTotal = document.querySelector('#total');
-    console.log(selectedItem);
-    console.log(slectedPrice);
     li.append(selectedItem.textContent);
     li.append(' ' + slectedPrice.textContent + '$');
     cart.append(li);
     showNr.innerHTML = noProducts==1 ? `(${noProducts})item` : `(${noProducts})items`; //not working, try with html+=htmlSegment
     let priceInt = parseInt(slectedPrice.textContent);
-    console.log(typeof priceInt);
     total = total + priceInt;
     selectedTotal.textContent = `Total: ${total}$`;
     noProducts = noProducts+1;
 }
 
 function search() {
-    var input, filter, ul, li, a, i, txtValue;
-    input = document.getElementById("search");
+    var input, filter, a, i, txtValue;
+    let li = document.querySelectorAll(".product-card");
+    input = document.getElementById("search-input");
     filter = input.value.toUpperCase();
-    
-    li = querySelectorAll(".product-card");
-    // for (i = 0; i < li.length; i++) {
-    //     a = li[i].getElementsByTagName("a")[0];
-    //     txtValue = a.textContent || a.innerText;
-    //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
-    //         li[i].style.display = "";
-    //     } else {
-    //         li[i].style.display = "none";
-    //     }
-    // }
+  
+    for (i = 0; i < li.length; i++) {
+        a = li[i].querySelector('.card-body .card-title');
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
 }
-li = document.querySelectorAll(".product-card");
-console.log(li);
+
 renderProducts();
