@@ -218,7 +218,7 @@ body {
 }
 
 .main-card {
-  width: 260px;
+  width: 320px;
   height: 370px;
 }
 
@@ -341,6 +341,14 @@ body {
     border-top: 1px solid white;
     color: white;
     padding-top: 10px;
+}
+.cart span{
+ 
+  background-color: red;
+  padding: 2px 9px;
+  color: white;
+  cursor: pointer;
+
 }
 
 #nrProducts{

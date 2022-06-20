@@ -45,6 +45,7 @@ async function renderProducts() {
 }
 
 function addToCart(id){
+    const remove = document.createElement("span");
     const li = document.createElement("li");
     const showNr = document.getElementById("nrProducts")
     let selectedItem = document.querySelector(`.item-${id} .card-title`);
@@ -52,11 +53,14 @@ function addToCart(id){
     let selectedTotal = document.querySelector('#total');
     li.append(selectedItem.textContent);
     li.append(' ' + slectedPrice.textContent + '$');
+    remove.append("X");
     cart.append(li);
+    cart.append(remove);
     showNr.innerHTML = noProducts==1 ? `(${noProducts})item` : `(${noProducts})items`; //not working, try with html+=htmlSegment
     let priceInt = parseInt(slectedPrice.textContent);
     total = total + priceInt;
     selectedTotal.textContent = `Total: ${total}$`;
+
     noProducts = noProducts+1;
 }
 
