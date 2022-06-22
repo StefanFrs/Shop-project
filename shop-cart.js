@@ -57,12 +57,27 @@ function addToCart(id){
     cart.append(li);
     cart.append(remove);
     showNr.innerHTML = noProducts==1 ? `(${noProducts})item` : `(${noProducts})items`; //not working, try with html+=htmlSegment
-    let priceInt = parseInt(slectedPrice.textContent);
+    let priceInt = parseFloat(slectedPrice.textContent);
+    console.log("product price" + priceInt);
     total = total + priceInt;
-    selectedTotal.textContent = `Total: ${total}$`;
+    console.log(total)
+    selectedTotal.textContent = `Total: ${total.toFixed(2)}$`;
+
+    remove.addEventListener("click",()=>{
+        li.remove();
+        remove.remove();
+        noProducts = noProducts-1;
+        console.log("nr produes" + noProducts);
+        total = total - priceInt;
+        console.log("pret total" + total);
+        showNr.innerHTML = noProducts-1==1 ? `(${noProducts-1})item` : noProducts-1==0 ? `no items` : `(${noProducts-1})items`;
+        selectedTotal.textContent = total==0 ? `Total:` : `Total: ${total.toFixed(2)}$`;
+    })
 
     noProducts = noProducts+1;
 }
+
+
 
 function search() {
     var input, filter, a, i, txtValue;
