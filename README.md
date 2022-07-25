@@ -1,4 +1,3 @@
-# droid_ REQUIREMENTS
 
 ### 1. STEP ONE - CREATE APP TEMPLATE
 Start with creating a responsive app template based on received materials. Feel free to use any technology of your choice. At this stage, we mainly expect good HTML/CSS skills, but using style libraries and toolkits is allowed too.
